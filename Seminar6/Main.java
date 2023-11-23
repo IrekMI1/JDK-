@@ -4,31 +4,6 @@ import java.util.HashMap;
 import java.util.Random;
 
 public class Main {
-//    public static String game(int doorCount, boolean changeMind) {
-//        Random random = new Random();
-//        int winIndex = random.nextInt(0, doorCount);
-//        int pickedIndex = random.nextInt(0, doorCount);
-//        int leavedIndex;
-//
-//        if (pickedIndex == winIndex) {
-//            do {
-//                leavedIndex = random.nextInt(0, doorCount);
-//            } while (leavedIndex == pickedIndex & leavedIndex == winIndex);
-//
-//            if (changeMind) {
-//                return "поменял, проиграл";
-//            } else {
-//                return "не поменял, выиграл";
-//            }
-//        } else {
-//            if (changeMind) {
-//                return "Поменял, выиграл";
-//            } else {
-//                return "не поменял, проиграл";
-//            }
-//        }
-//    }
-
     public static void main(String[] args) {
         int doorCount = 3;
         int experimentCount = 100000;
@@ -37,7 +12,7 @@ public class Main {
         String result;
 
         for (int i = 1; i <= experimentCount; i++) {
-            result = quiz.getResult( false);
+            result = quiz.getResult( true);
             results.put(i, result);
             System.out.println(result);
         }
